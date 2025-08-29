@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Historial {
+   public UUID pasajero;
+   public ArrayList<String> viajesRealizados;
+   public double totalGastado;
+
+   public Historial(UUID pasajero) {
+        this.pasajero = pasajero;
+        this.viajesRealizados = new ArrayList<String>();
+        this.totalGastado = 0;
+   } 
+
+   public void agregarViaje(String recorrido, String abono) {
+        double monto = 1000
+        if (abono == "Medio") {
+            monto = 500
+        } else if (abono == "Total") {
+            monto = 0;
+        }
+        this.viajesRealizados.add(recorrido);
+        this.totalGastado += monto;
+   }
+
+   public String consultarHistorial() {
+        return this.viajesRealizados;
+   }
+}
