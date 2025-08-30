@@ -1,3 +1,5 @@
+package com.uncuyo.sistemacolectivos;
+
 import java.util.UUID;
 
 class Pasajero {

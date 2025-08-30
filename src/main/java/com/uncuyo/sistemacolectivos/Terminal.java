@@ -1,17 +1,18 @@
+package com.uncuyo.sistemacolectivos;
+
 import java.util.UUID;
 import java.util.ArrayList;
-import java.util.List;
 
 class Terminal {
     private UUID idTerminal;
     public String nombre;
     public String ubicacion;
-    public ArrayList<String> colectivos;
+    public ArrayList<UUID> colectivos;
     public ArrayList<String> empleados;
 
     public Terminal(String nombre, String ubicacion) {
         this.idTerminal = UUID.randomUUID();
-        this.colectivos = new ArrayList<String>();
+        this.colectivos = new ArrayList<UUID>();
         this.empleados = new ArrayList<String>();
         this.nombre = nombre;
         this.ubicacion = ubicacion;

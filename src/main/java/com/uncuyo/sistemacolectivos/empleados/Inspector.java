@@ -1,4 +1,7 @@
+package com.uncuyo.sistemacolectivos.empleados;
+
 import java.util.UUID;
+import com.uncuyo.sistemacolectivos.Empleado;
 
 class Inspector extends Empleado {
     private UUID idInspector;
@@ -19,8 +22,7 @@ class Inspector extends Empleado {
         System.out.println("Solicitando boleto...");
     }
 
-    public String verReporte() {
+    public void verReporte() {
         System.out.println(String.format("Mostrando reporte del colectivo %s", colectivoAsignado));
     }
-
 }

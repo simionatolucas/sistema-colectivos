@@ -1,7 +1,11 @@
+package com.uncuyo.sistemacolectivos;
+
 class Persona {
     public String nombre;
     public String telefono;
     public String email;
+
+    public Persona() {}
 
     public Persona(String nombre) {
         this.nombre = nombre;

@@ -1,5 +1,7 @@
+package com.uncuyo.sistemacolectivos;
+
 import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 class Historial {
    public UUID pasajero;
@@ -13,9 +15,9 @@ class Historial {
    } 
 
    public void agregarViaje(String recorrido, String abono) {
-        double monto = 1000
+        double monto = 1000;
         if (abono == "Medio") {
-            monto = 500
+            monto = 500;
         } else if (abono == "Total") {
             monto = 0;
         }
@@ -23,7 +25,7 @@ class Historial {
         this.totalGastado += monto;
    }
 
-   public String consultarHistorial() {
+   public ArrayList<String> consultarHistorial() {
         return this.viajesRealizados;
    }
 }

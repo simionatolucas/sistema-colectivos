@@ -1,4 +1,7 @@
+package com.uncuyo.sistemacolectivos.empleados;
+
 import java.util.UUID;
+import com.uncuyo.sistemacolectivos.Empleado;
 
 class Mecanico extends Empleado {
     private UUID idMecanico;

@@ -1,14 +1,16 @@
+package com.uncuyo.sistemacolectivos;
+
 import java.util.UUID;
 
 class Colectivo {
     private UUID idColectivo;
     public String modelo;
     public int capacidad;
-    private DateTime horaSalida;
+    private String horaSalida;
     public String estado;
 
-    public Colectivo(String modelo, int capacidad, DateTime horaSalida) {
-        this.idColectivo = UUID.random();
+    public Colectivo(String modelo, int capacidad, String horaSalida) {
+        this.idColectivo = UUID.randomUUID();
         this.modelo = modelo;
         this.capacidad = capacidad;
         this.horaSalida = horaSalida;
@@ -16,16 +18,16 @@ class Colectivo {
     }
 
     public void arrancar() {
-        this.estado = "Encendido"
+        this.estado = "Encendido";
         System.out.println(String.format("Arrancando el colectivo %s", idColectivo));
     }
 
     public void detener() {
-        this.estado = "Detenido"
+        this.estado = "Detenido";
         System.out.println(String.format("Deteniendo el colectivo %s", idColectivo));
     }
 
-    public DateTime verHorario() {
+    public String verHorario() {
         return this.horaSalida;
     }
 }

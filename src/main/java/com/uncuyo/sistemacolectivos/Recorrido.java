@@ -1,24 +1,24 @@
+package com.uncuyo.sistemacolectivos;
+
 import java.util.UUID;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Iterator;
 
 class Recorrido {
     private UUID idRuta;
     public String nombreRuta;
-    public ArrayList<String> paradas;
+    public ArrayList<Parada> paradas;
     public int tiempoViaje;
 
     public Recorrido(String nombreRuta, int tiempoViaje) {
         this.idRuta = UUID.randomUUID();
         this.nombreRuta = nombreRuta;
         this.tiempoViaje = tiempoViaje;
-        this.paradas = new ArrayList<String>();
+        this.paradas = new ArrayList<Parada>();
     }
 
-    public void anexarParada(String parada) {
+    public void anexarParada(Parada parada) {
         this.paradas.add(parada);
-        System.out.println(String)
     }
 
     public int calcularTiempoViaje() {
@@ -29,7 +29,7 @@ class Recorrido {
         Iterator<Parada> itrParadas = paradas.iterator();
         while(itrParadas.hasNext()) {
             Parada parada = itrParadas.next();
-            System.out.println(String.format("Nombre: %s ; Ubicación: %s ; Hora de llegada estimada: %s", parada.));
+            System.out.println(String.format("Nombre: %s ; Ubicación: %s ; Hora de llegada estimada: %s", parada));
         }
     }
 }

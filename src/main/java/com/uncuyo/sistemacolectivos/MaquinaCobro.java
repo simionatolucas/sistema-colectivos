@@ -1,3 +1,7 @@
+package com.uncuyo.sistemacolectivos;
+
+import java.util.UUID;
+
 class MaquinaCobro {
     public double monto;
     public UUID pasajero;

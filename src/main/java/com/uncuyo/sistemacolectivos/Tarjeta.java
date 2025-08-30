@@ -1,3 +1,5 @@
+package com.uncuyo.sistemacolectivos;
+
 import java.util.UUID;
 
 class Tarjeta {
@@ -14,17 +16,17 @@ class Tarjeta {
     }
 
     public void actualizarSaldo(String abonoTarjeta) {
-        double monto = 1000
+        double monto = 1000;
         if (abonoTarjeta == "Medio") {
-            monto = 500
+            monto = 500;
         } else if (abonoTarjeta == "Total") {
             monto = 0;
         }
-        this.abonoTarjeta -= monto;
-        System.out.println(String.format("Nuevo saldo: %f", this.abonoTarjeta));
+        this.saldo -= monto;
+        System.out.println(String.format("Nuevo saldo: %f", this.saldo));
     }
 
     public void verSaldo() {
-        System.out.println(this.abonoTarjeta);
+        System.out.println(this.saldo);
     }
 }
