@@ -8,9 +8,9 @@ class Recorrido {
     private UUID idRuta;
     public String nombreRuta;
     public ArrayList<Parada> paradas;
-    public int tiempoViaje;
+    public String tiempoViaje;
 
-    public Recorrido(String nombreRuta, int tiempoViaje) {
+    public Recorrido(String nombreRuta, String tiempoViaje) {
         this.idRuta = UUID.randomUUID();
         this.nombreRuta = nombreRuta;
         this.tiempoViaje = tiempoViaje;
@@ -25,7 +25,7 @@ class Recorrido {
         this.paradas.add(parada);
     }
 
-    public int calcularTiempoViaje() {
+    public String calcularTiempoViaje() {
         return this.tiempoViaje;
     }
 
