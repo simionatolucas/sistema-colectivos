@@ -16,6 +16,10 @@ class Recorrido {
         this.tiempoViaje = tiempoViaje;
         this.paradas = new ArrayList<Parada>();
     }
+    
+    public UUID getIdRuta() {
+        return this.idRuta;
+    }
 
     public void anexarParada(Parada parada) {
         this.paradas.add(parada);
@@ -29,7 +33,7 @@ class Recorrido {
         Iterator<Parada> itrParadas = paradas.iterator();
         while(itrParadas.hasNext()) {
             Parada parada = itrParadas.next();
-            System.out.println(String.format("Nombre: %s ; Ubicación: %s ; Hora de llegada estimada: %s", parada));
+            System.out.println(parada.verDetalles());
         }
     }
 }

@@ -3,7 +3,7 @@ package com.uncuyo.sistemacolectivos.empleados;
 import java.util.UUID;
 import com.uncuyo.sistemacolectivos.Empleado;
 
-class Chofer extends Empleado {
+public class Chofer extends Empleado {
     private UUID idChofer;
     public String turno;
     public UUID rutaAsignada;

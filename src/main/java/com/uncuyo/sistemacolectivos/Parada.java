@@ -19,7 +19,7 @@ class Parada {
         this.horaLlegadaEstimada = horaLlegadaEstimada;
     }  
 
-    public void verDetalles() { // Esto debería tener un return.
-        System.out.println(String.format("ID Parada: %s ; Nombre: %s ; Ubicación: %s ; Hora de llegada estimada: %s", idParada, nombre, ubicacion, horaLlegadaEstimada));
+    public String verDetalles() { // Esto debería tener un return.
+        return String.format("ID Parada: %s ; Nombre: %s ; Ubicación: %s ; Hora de llegada estimada: %s", idParada, nombre, ubicacion, horaLlegadaEstimada);
     }
 }
