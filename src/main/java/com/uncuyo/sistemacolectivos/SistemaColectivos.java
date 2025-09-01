@@ -1,7 +1,6 @@
 package com.uncuyo.sistemacolectivos;
 
 import com.uncuyo.sistemacolectivos.empleados.Chofer;
-import java.util.UUID;
 
 public class SistemaColectivos {
 
