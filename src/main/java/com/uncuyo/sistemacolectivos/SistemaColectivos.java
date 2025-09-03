@@ -1,6 +1,9 @@
 package com.uncuyo.sistemacolectivos;
 
 import com.uncuyo.sistemacolectivos.empleados.Chofer;
+import com.uncuyo.sistemacolectivos.empleados.Inspector;
+import com.uncuyo.sistemacolectivos.empleados.Mecanico;
+
 
 public class SistemaColectivos {
 
@@ -14,12 +17,10 @@ public class SistemaColectivos {
         ruta1.anexarParada(parada2);
         
         Colectivo colectivo1 = new Colectivo("Mercedes-Benz", 40, "18:30 hs");
-        Chofer chofer1 = new Chofer(ruta1.getIdRuta());
-        
-        chofer1.nombre = "Juan Perez";
-        chofer1.telefono = "261-3405989";
-        chofer1.email = "juanperez@ejemplo.com";
-        chofer1.establecerTurno("Tarde-Noche");
+        Chofer chofer1 = new Chofer("Juan Perez", "261-312312s3", "juanperez@ejemplo.com", ruta1.getIdRuta());
+        Mecanico mecanico1 = new Mecanico("Carlos Gómez", "262-5123456", "carlosgomez@ejemplo.com", colectivo1.getId());
+
+        chofer1.setTurno("Tarde-Noche");
         chofer1.setSalario(1200000.00);
         
         chofer1.iniciarTurno();

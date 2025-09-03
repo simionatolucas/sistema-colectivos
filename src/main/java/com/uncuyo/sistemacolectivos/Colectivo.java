@@ -3,7 +3,7 @@ package com.uncuyo.sistemacolectivos;
 import java.util.UUID;
 
 class Colectivo {
-    private UUID idColectivo;
+    private final UUID idColectivo;
     public String modelo;
     public int capacidad;
     private String horaSalida;
@@ -15,6 +15,10 @@ class Colectivo {
         this.capacidad = capacidad;
         this.horaSalida = horaSalida;
         this.estado = "Detenido";
+    }
+
+    public UUID getId() {
+        return idColectivo;
     }
 
     public void arrancar() {
