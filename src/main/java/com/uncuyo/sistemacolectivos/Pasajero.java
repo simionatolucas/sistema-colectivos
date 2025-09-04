@@ -2,30 +2,33 @@ package com.uncuyo.sistemacolectivos;
 
 import java.util.UUID;
 
-class Pasajero {
-    private UUID idPasajero;
+class Pasajero extends Persona {
+    private final UUID idPasajero;
     public String destino;
-    public UUID nroBoleto;
     public String abonoTarjeta;
     public Tarjeta tarjeta;
     public Historial historial;
     public boolean pagoPasaje;
     public boolean solicitoParada;
 
-    public Pasajero(UUID nroBoleto, String destino, String abonoTarjeta, Tarjeta tarjeta, Historial historial) {
+    public Pasajero(String nombre, String telefono, String email, String destino, String abonoTarjeta) {
+        super(nombre, telefono, email);
         this.destino = destino;
-        this.nroBoleto = nroBoleto;
         this.idPasajero = UUID.randomUUID();
         this.abonoTarjeta = abonoTarjeta;
-        this.tarjeta = tarjeta;
-        this.historial = historial;
+        this.tarjeta = new Tarjeta(this.idPasajero);
+        this.historial = new Historial(this.idPasajero);
         this.pagoPasaje = false;
         this.solicitoParada = false;
     }
 
-    public void pagarPasaje() {
+    public UUID getId() {
+        return idPasajero;
+    }
+
+    public void pagarPasaje(double monto) {
         this.pagoPasaje = true;
-        this.tarjeta.actualizarSaldo(this.abonoTarjeta);
+        this.tarjeta.actualizarSaldo(this.abonoTarjeta, monto);
         this.historial.agregarViaje(this.destino, this.abonoTarjeta);
     }
 

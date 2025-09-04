@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 class Historial {
-   public UUID pasajero;
+   private UUID pasajero;
    public ArrayList<String> viajesRealizados;
    public double totalGastado;
 
@@ -12,7 +12,11 @@ class Historial {
         this.pasajero = pasajero;
         this.viajesRealizados = new ArrayList<String>();
         this.totalGastado = 0;
-   } 
+   }
+
+   public UUID getPasajero() {
+       return this.pasajero;
+   }
 
    public void agregarViaje(String recorrido, String abono) {
         double monto = 1000;

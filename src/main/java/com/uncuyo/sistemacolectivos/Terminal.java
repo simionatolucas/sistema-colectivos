@@ -4,7 +4,7 @@ import java.util.UUID;
 import java.util.ArrayList;
 
 class Terminal {
-    private UUID idTerminal;
+    private final UUID idTerminal;
     public String nombre;
     public String ubicacion;
     public ArrayList<UUID> colectivos;
@@ -16,6 +16,10 @@ class Terminal {
         this.empleados = new ArrayList<String>();
         this.nombre = nombre;
         this.ubicacion = ubicacion;
+    }
+
+    public UUID getId() {
+        return idTerminal;
     }
 
     public void agregarColectivo(UUID idColectivo) {

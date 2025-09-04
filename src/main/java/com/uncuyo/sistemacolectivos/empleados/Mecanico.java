@@ -8,7 +8,7 @@ public class Mecanico extends Empleado {
     public UUID colectivoAsignado;
 
     public UUID getId() {
-        return idMecanico;
+        return this.idMecanico;
     }
 
     public Mecanico(String nombre, String telefono, String email, UUID colectivoAsignado) {
@@ -22,7 +22,12 @@ public class Mecanico extends Empleado {
         System.out.println(String.format("El mecánico %s inició su turno.", this.nombre));
     }
 
+    // Mecánico implementa un metodo sobrecargado para realizar mantenimiento, diferenciando mantenimiento general de cosas específicas.
     public void realizarMantenimiento(UUID idColectivo) {
-        System.out.println(String.format("El mecánico %s arregló el colectivo %s.", this.idMecanico, idColectivo));
+        System.out.println(String.format("El mecánico %s realizó mantenimiento general en el colectivo ID: %s.", this.idMecanico, idColectivo));
+    }
+
+    public void realizarMantenimiento(UUID idColectivo, String tarea) {
+        System.out.println(String.format("El mecánico %s realizó mantenimiento en el colectivo ID: %s. Trabajo realizado: %s", this.nombre, idColectivo, tarea));
     }
 }

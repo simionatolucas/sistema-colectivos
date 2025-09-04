@@ -5,6 +5,8 @@ class Persona {
     public String telefono;
     public String email;
 
+
+    // La clase persona implementa un constructor sobrecargado que permite instanciar sus objetos sin inicializar todos sus atributos.
     public Persona() {}
 
     public Persona(String nombre) {

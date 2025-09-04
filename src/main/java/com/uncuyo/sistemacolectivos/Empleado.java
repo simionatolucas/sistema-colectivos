@@ -1,6 +1,6 @@
 package com.uncuyo.sistemacolectivos;
 
-public class Empleado extends Persona { // Empleado tiene que ser public para que sea accesible desde la subcarpeta de empleados.
+public class Empleado extends Persona {
     public String turno;
     private double salario;
 
@@ -8,16 +8,16 @@ public class Empleado extends Persona { // Empleado tiene que ser public para qu
         super(nombre, telefono, email);
     }
 
-    public void setTurno(String turno) {
-        this.turno = turno;
-    }
-    
     public void setSalario(double salario) {
         this.salario = salario;
     }
 
     public double getSalario() {
         return this.salario;
+    }
+
+    public void setTurno(String turno) {
+        this.turno = turno;
     }
 
     public void iniciarTurno() {

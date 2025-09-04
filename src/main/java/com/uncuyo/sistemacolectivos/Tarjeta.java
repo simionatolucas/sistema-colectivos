@@ -3,7 +3,7 @@ package com.uncuyo.sistemacolectivos;
 import java.util.UUID;
 
 class Tarjeta {
-    private UUID idTarjeta;
+    private final UUID idTarjeta;
     public UUID pasajero;
     private double saldo;
 
@@ -15,15 +15,18 @@ class Tarjeta {
         this.saldo = 10000;
     }
 
-    public void actualizarSaldo(String abonoTarjeta) {
-        double monto = 1000;
+    public UUID getId() {
+        return idTarjeta;
+    }
+
+    public void actualizarSaldo(String abonoTarjeta, double monto) {
         if (abonoTarjeta == "Medio") {
-            monto = 500;
+            monto = monto/2;
         } else if (abonoTarjeta == "Total") {
             monto = 0;
         }
         this.saldo -= monto;
-        System.out.println(String.format("Nuevo saldo: %f", this.saldo));
+        System.out.println(String.format("El pasajero ID: %s pagó su pasaje. ; Nuevo saldo: %.2f", this.pasajero, this.saldo));
     }
 
     public void verSaldo() {

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 class Recorrido {
-    private UUID idRuta;
+    private final UUID idRuta;
     public String nombreRuta;
     public ArrayList<Parada> paradas;
     public String tiempoViaje;
@@ -17,12 +17,16 @@ class Recorrido {
         this.paradas = new ArrayList<Parada>();
     }
     
-    public UUID getIdRuta() {
+    public UUID getId() {
         return this.idRuta;
     }
 
     public void anexarParada(Parada parada) {
         this.paradas.add(parada);
+    }
+
+    public void quitarParada(Parada parada) {
+        this.paradas.remove(parada);
     }
 
     public String calcularTiempoViaje() {
@@ -31,6 +35,8 @@ class Recorrido {
 
     public void listarParadas() {
         Iterator<Parada> itrParadas = paradas.iterator();
+
+        System.out.println(String.format("Listando paradas para el recorrido %s.", this.nombreRuta));
         while(itrParadas.hasNext()) {
             Parada parada = itrParadas.next();
             System.out.println(parada.verDetalles());

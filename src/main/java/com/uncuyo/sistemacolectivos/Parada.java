@@ -3,7 +3,7 @@ package com.uncuyo.sistemacolectivos;
 import java.util.UUID;
 
 class Parada {
-    private UUID idParada;
+    private final UUID idParada;
     public String nombre;
     public String ubicacion;
     private String horaLlegadaEstimada;
@@ -13,6 +13,10 @@ class Parada {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.horaLlegadaEstimada = horaLlegadaEstimada;
+    }
+
+    public UUID getId() {
+        return idParada;
     }
 
     public void actualizarHoraLlegada(String horaLlegadaEstimada) {

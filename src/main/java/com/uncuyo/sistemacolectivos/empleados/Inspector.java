@@ -16,7 +16,7 @@ public class Inspector extends Empleado {
     }
 
     public UUID getId() {
-        return idInspector;
+        return this.idInspector;
     }
 
     public void cambiarColectivo(UUID colectivoAsignado) {
